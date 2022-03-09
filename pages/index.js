@@ -1,5 +1,7 @@
+import Dropzone from "react-dropzone";
 import Submit from "../components/Submit";
-import { Grid, Container } from "@mui/material";
+import { Grid, Container, Box, Typography } from "@mui/material";
+import FileUpload from "../components/FileUpload";
 
 export default function Home() {
   return (
@@ -14,7 +16,7 @@ export default function Home() {
           style={{ minHeight: "100vh" }}
         >
           <Grid item xs={3}>
-            <Submit />
+            <FileUpload />
           </Grid>
         </Grid>
       </Container>
