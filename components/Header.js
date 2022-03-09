@@ -7,9 +7,19 @@ import Typography from "@mui/material/Typography";
 function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar
+        sx={{
+          background: "transparent",
+          boxShadow: "none",
+        }}
+        position="static"
+      >
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ color: "black", flexGrow: 1 }}
+          >
             Astro
           </Typography>
         </Toolbar>

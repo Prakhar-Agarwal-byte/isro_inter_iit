@@ -43,20 +43,25 @@ const pdata = [
   },
 ];
 
-function MainChart() {
+function DLineChart() {
   return (
-    <ResponsiveContainer aspect={3}>
+    <ResponsiveContainer>
       <LineChart data={pdata}>
         <CartesianGrid />
         <XAxis dataKey="name" interval={"preserveStartEnd"} />
         <YAxis></YAxis>
         <Legend />
         <Tooltip />
-        <Line dataKey="student" stroke="black" activeDot={{ r: 8 }} />
-        <Line dataKey="fees" stroke="red" activeDot={{ r: 8 }} />
+        <Line
+          type="monotone"
+          dataKey="fees"
+          stroke="violet"
+          strokeWidth={3}
+          activeDot={{ r: 8 }}
+        />
       </LineChart>
     </ResponsiveContainer>
   );
 }
 
-export default MainChart;
+export default DLineChart;
