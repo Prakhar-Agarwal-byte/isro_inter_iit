@@ -1,7 +1,6 @@
 import React from "react";
 import Dropzone from "react-dropzone";
-import Submit from "../components/Submit";
-import { Grid, Container, Box, Typography } from "@mui/material";
+import { Grid, Box, Typography, Button } from "@mui/material";
 
 function FileUpload() {
   return (
@@ -22,7 +21,7 @@ function FileUpload() {
                 <div {...getRootProps()}>
                   <input {...getInputProps()} />
                   <Typography variant="h5">
-                    Drag 'n' drop some files here, or click to select files
+                    Drag and drop some files here, or click to select files
                   </Typography>
                 </div>
               </section>
@@ -31,7 +30,9 @@ function FileUpload() {
         </Box>
       </Grid>
       <Grid item>
-        <Submit />
+        <Button size="large" variant="contained" component="label">
+          Upload
+        </Button>
       </Grid>
     </Grid>
   );

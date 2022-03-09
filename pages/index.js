@@ -1,6 +1,4 @@
-import Dropzone from "react-dropzone";
-import Submit from "../components/Submit";
-import { Grid, Container, Box, Typography } from "@mui/material";
+import { Grid, Container } from "@mui/material";
 import FileUpload from "../components/FileUpload";
 
 export default function Home() {

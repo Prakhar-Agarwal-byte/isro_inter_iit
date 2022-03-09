@@ -45,7 +45,7 @@ const pdata = [
 
 function DLineChart() {
   return (
-    <ResponsiveContainer>
+    <ResponsiveContainer aspect={2}>
       <LineChart data={pdata}>
         <CartesianGrid />
         <XAxis dataKey="name" interval={"preserveStartEnd"} />
