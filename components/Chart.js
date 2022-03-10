@@ -15,6 +15,7 @@ const Chart = ({ fileName }) => {
 	const [LightCurvedata, setState] = useState([]);
 	useEffect(() => {
 		convertCSVToArray(fileName).then((tempData) => {
+			console.log(tempData);
 			setState(
 				tempData.Time.map((t, ind) => {
 					return {
