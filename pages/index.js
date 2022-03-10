@@ -2,68 +2,69 @@ import Submit from "../components/Submit";
 import { Grid } from "@mui/material";
 import PropertyCard from "../components/PropertyCard";
 import {
-  LineChart,
-  ResponsiveContainer,
-  Legend,
-  Tooltip,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
+	LineChart,
+	ResponsiveContainer,
+	Legend,
+	Tooltip,
+	Line,
+	XAxis,
+	YAxis,
+	CartesianGrid,
 } from "recharts";
+import Chart from "../components/Chart";
 
 const pdata = [
-  {
-    name: "MongoDb",
-    student: 11,
-    fees: 120,
-  },
-  {
-    name: "Javascript",
-    student: 15,
-    fees: 12,
-  },
-  {
-    name: "PHP",
-    student: 5,
-    fees: 10,
-  },
-  {
-    name: "Java",
-    student: 10,
-    fees: 5,
-  },
-  {
-    name: "C#",
-    student: 9,
-    fees: 4,
-  },
-  {
-    name: "C++",
-    student: 10,
-    fees: 8,
-  },
+	{
+		name: "MongoDb",
+		student: 11,
+		fees: 120,
+	},
+	{
+		name: "Javascript",
+		student: 15,
+		fees: 12,
+	},
+	{
+		name: "PHP",
+		student: 5,
+		fees: 10,
+	},
+	{
+		name: "Java",
+		student: 10,
+		fees: 5,
+	},
+	{
+		name: "C#",
+		student: 9,
+		fees: 4,
+	},
+	{
+		name: "C++",
+		student: 10,
+		fees: 8,
+	},
 ];
 
 export default function Home() {
-  return (
-    <div>
-      <Grid container spacing={2}>
-        <Grid item xs={3}>
-          <PropertyCard />
-        </Grid>
-        <Grid item xs={3}>
-          <PropertyCard />
-        </Grid>
-        <Grid item xs={3}>
-          <PropertyCard />
-        </Grid>
-        <Grid item xs={3}>
-          <PropertyCard />
-        </Grid>
-        <Grid item xs={12}>
-          <h1 className="text-heading">Line Chart Using Rechart</h1>
-          <ResponsiveContainer width="100%" aspect={3}>
+	return (
+		<div>
+			<Grid container spacing={2}>
+				<Grid item xs={3}>
+					<PropertyCard />
+				</Grid>
+				<Grid item xs={3}>
+					<PropertyCard />
+				</Grid>
+				<Grid item xs={3}>
+					<PropertyCard />
+				</Grid>
+				<Grid item xs={3}>
+					<PropertyCard />
+				</Grid>
+				<Grid item xs={12}>
+					<h1 className="text-heading">Line Chart Using Rechart</h1>
+					{/* <ResponsiveContainer width="100%" aspect={3}>
             <LineChart data={pdata} margin={{ right: 300 }}>
               <CartesianGrid />
               <XAxis dataKey="name" interval={"preserveStartEnd"} />
@@ -73,9 +74,10 @@ export default function Home() {
               <Line dataKey="student" stroke="black" activeDot={{ r: 8 }} />
               <Line dataKey="fees" stroke="red" activeDot={{ r: 8 }} />
             </LineChart>
-          </ResponsiveContainer>
-        </Grid>
-      </Grid>
-    </div>
-  );
+          </ResponsiveContainer> */}
+					<Chart fileName="lcFile.csv" />
+				</Grid>
+			</Grid>
+		</div>
+	);
 }
