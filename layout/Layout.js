@@ -1,6 +1,8 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import Header from "../components/Header";
 import Head from "next/head";
+import DateAdapter from "@mui/lab/AdapterMoment";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
 
 export default function Layout({ children }) {
   return (
@@ -10,7 +12,9 @@ export default function Layout({ children }) {
       </Head>
       <CssBaseline />
       <Header />
-      <main>{children}</main>
+      <LocalizationProvider dateAdapter={DateAdapter}>
+        {children}
+      </LocalizationProvider>
     </>
   );
 }
